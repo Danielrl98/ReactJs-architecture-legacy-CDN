@@ -1,6 +1,6 @@
 # Sobre o Repositório
 
-O repositório é responsável por implementar o ReactJS  em sistemas legados.
+O repositório é responsável por implementar o ReactJS em sistemas legados, sem precisar de compilador.
 
 CDN oficial do ReactJs e Babel
 
