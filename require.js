@@ -7,7 +7,7 @@ const imports = {
   components: {
     count: load("./src/components/count.jsx")
   },
-  layouts:{}
+  layouts: {}
 }
 
 function load(url) {
