@@ -1,8 +1,7 @@
-class Main extends React.Component {
-    render() {
-        return (
-            <App />
-        );
-    }
-}
-ReactDOM.render(<Main />, document.getElementById("react-root"));
+const root = ReactDOM.createRoot(document.getElementById('react-root'));
+
+root.render( 
+    <React.Fragment>
+        <App />
+    </React.Fragment>
+);
