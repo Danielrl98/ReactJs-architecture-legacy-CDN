@@ -10,8 +10,8 @@ function load(url) {
 }
 
 /*default configuration */
-load("./app.jsx")
+load("./src/app.jsx")
 /*components */
-load("./components/count.jsx")
+load("./src/components/count.jsx")
 /*layouts */
 
