@@ -3,11 +3,15 @@ const imports = {
     styledComponents: load("//unpkg.com/styled-components@4.0.1/dist/styled-components.min.js"),
     axios: load("https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
   },
-  app: load("./src/app.jsx"),
+  default:{
+    app: load("./src/app.jsx"),
+    main: load('./src/main.jsx')
+  },
   components: {
     count: load("./src/components/count.jsx")
   },
-  layouts: {}
+  layouts: {},
+ 
 }
 
 function load(url) {
