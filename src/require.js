@@ -21,7 +21,7 @@ function loadJS(url) {
   const script = document.createElement('script');
   script.src = url;
   script.type = 'text/babel';
-  document.head.appendChild(script);
+  document.body.appendChild(script);
 }
 function loadCss(url){
   const style = document.createElement('link');
