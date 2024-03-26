@@ -1,22 +1,31 @@
 const imports = {
   dependencies: {
-    styledComponents: load("//unpkg.com/styled-components@4.0.1/dist/styled-components.min.js"),
-    axios: load("https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+    styledComponents: loadJS("//unpkg.com/styled-components@4.0.1/dist/styled-components.min.js"),
+    axios: loadJS("https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
   },
   default:{
-    app: load("./src/app.jsx"),
-    main: load('./src/main.jsx')
+    app: loadJS("./src/app.jsx"),
+    main: loadJS('./src/main.jsx')
   },
   components: {
-    count: load("./src/components/count.jsx")
+    count: loadJS("./src/components/count.jsx")
   },
   layouts: {},
+  css: {
+    main: loadCss('./src/main.css')
+  }
  
 }
 
-function load(url) {
+function loadJS(url) {
   const script = document.createElement('script');
   script.src = url;
   script.type = 'text/babel';
   document.head.appendChild(script);
+}
+function loadCss(url){
+  const style = document.createElement('link');
+  style.href = url;
+  style.rel = 'stylesheet';
+  document.head.appendChild(style);
 }
