@@ -1,23 +1,14 @@
-const imports = {
-  dependencies: {
-    styledComponents: loadJS("//unpkg.com/styled-components@4.0.1/dist/styled-components.min.js"),
-    axios: loadJS("https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
-  },
-  default:{
-    app: loadJS("./src/app.jsx"),
-    main: loadJS('./src/main.jsx')
-  },
-  components: {
-    count: loadJS("./src/components/count.jsx")
-  },
-  layouts: {},
-  css: {
-    main: loadCss('./src/main.css')
-  }
- 
-}
+import { components } from './import/components.js'
+import { dependencies } from './import/dependencies.js';
+import { defaultApp } from './import/default.js';
+import { css } from './import/css.js';
 
-function loadJS(url) {
+dependencies.forEach(e => loadJSX(e))
+defaultApp.forEach(e => loadJSX(e))
+components.forEach(e => loadJSX(e))
+css.forEach(e => loadCss(e))
+
+function loadJSX(url) {
   const script = document.createElement('script');
   script.src = url;
   script.type = 'text/babel';
@@ -29,3 +20,5 @@ function loadCss(url){
   style.rel = 'stylesheet';
   document.head.appendChild(style);
 }
+
+
